@@ -22,6 +22,7 @@ import okhttp3.Response;
 public class Load_Food_Asynctask extends AsyncTask<Void, String, Boolean> {
     private ArrayList<Foods> list_Foods;
 //    private Load_Data_Listener listener;
+    //test
     private RequestBody requestBody;
 
 //    public Load_Food_Asynctask(Load_Data_Listener listener, RequestBody requestBody) {
