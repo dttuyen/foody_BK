@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Ki 6/Lap Trinh Mobile(Android)/CuoiKi/Foody/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/K6/LTDD/foody_BK/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.203" />
+        <entry key="..\:/K6/LTDD/foody_BK/app/src/main/res/drawable/custom_button_cart_frag.xml" value="0.124" />
+        <entry key="..\:/K6/LTDD/foody_BK/app/src/main/res/drawable/custom_button_count_number.xml" value="0.203" />
         <entry key="..\:/Ki 6/Lap Trinh Mobile(Android)/CuoiKi/Foody/app/src/main/res/layout/fragment_food.xml" value="0.371875" />
-        <entry key="..\:/Ki 6/Lap Trinh Mobile(Android)/CuoiKi/Foody/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.371875" />
+        <entry key="..\:/Ki2-Nam3/Android/CuoiKi/foody_BK/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Ki2-Nam3/Android/CuoiKi/foody_BK/app/src/main/res/layout/fragment_bill.xml" value="0.25416666666666665" />
+        <entry key="..\:/Ki2-Nam3/Android/CuoiKi/foody_BK/app/src/main/res/layout/fragment_food.xml" value="0.12360688956433637" />
       </map>
     </option>
   </component>
