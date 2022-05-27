@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.test.foody.R;
+import com.test.foody.fragment.AccountsFragment;
+import com.test.foody.fragment.BillFragment;
+import com.test.foody.fragment.CartFragment;
 import com.test.foody.fragment.FoodFragment;
 import com.test.foody.models.Bill;
 import com.test.foody.utils.Constant_Values;
@@ -66,15 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUp(){
         fragment_Food = new FoodFragment();
-//        fragment_Cart = new CartFragment(new Bill() ,new ArrayList<>(), true, false,
-//                new Listener_for_BackFragment() {
-//                    @Override
-//                    public void orderBill_Or_BackFragment() {
-//
-//                    }
-//                });
-//        fragment_Bill = new BillFragment();
-//        fragment_Accounts = new AccountsFragment();
+        fragment_Cart = new CartFragment();
+        fragment_Bill = new BillFragment();
+        fragment_Accounts = new AccountsFragment();
         chang_Menu(fragment_Food);
     }
 
