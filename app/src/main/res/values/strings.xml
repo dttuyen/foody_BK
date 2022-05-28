@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Foody</string>
+    <string name="app_name">Foody BK</string>
     <string name="food_menu">Food</string>
     <string name="cart_menu">Cart</string>
     <string name="bill_menu">Bill</string>
