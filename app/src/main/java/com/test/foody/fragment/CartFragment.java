@@ -1,4 +1,4 @@
-package com.example.foody.fragment;
+package com.test.foody.fragment;
 
 import android.os.Bundle;
 
