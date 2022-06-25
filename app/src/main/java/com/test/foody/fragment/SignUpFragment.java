@@ -18,16 +18,17 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.foody.R;
-import com.example.foody.asyntask.InsertOrDelOrUpdate_Asynctask;
-import com.example.foody.asyntask.Load_Customer_Asynctask;
-import com.example.foody.ativity.MainActivity;
-import com.example.foody.listeners.Check_task_listener;
-import com.example.foody.listeners.Listener_for_BackFragment;
-import com.example.foody.listeners.Load_Customer_Listener;
-import com.example.foody.models.Customer;
-import com.example.foody.utils.Constant_Values;
-import com.example.foody.utils.Methods;
+import com.test.foody.R;
+import com.test.foody.asyntask.InsertOrDelOrUpdate_Asynctask;
+import com.test.foody.asyntask.Load_Customer_Asynctask;
+import com.test.foody.activity.MainActivity;
+import com.test.foody.listeners.Check_task_listener;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.listeners.Load_Customer_Listener;
+import com.test.foody.models.Customer;
+import com.test.foody.utils.Constant_Values;
+import com.test.foody.utils.Methods;
+import com.test.foody.listeners.Listener_for_BackFragment;
 
 import okhttp3.RequestBody;
 
@@ -210,7 +211,7 @@ public class SignUpFragment extends Fragment {
                                         new Listener_for_BackFragment() {
                                             @Override
                                             public void orderBill_Or_BackFragment() {
-                                                BillFragment.setCheck_NewBill(true);
+                                                com.example.foody.fragment.BillFragment.setCheck_NewBill(true);
                                                 FoodFragment.setCheck_NewCus(true);
                                                 MainActivity.selecFoodMenu();
                                             }
