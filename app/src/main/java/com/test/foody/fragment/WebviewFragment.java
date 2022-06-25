@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.foody.R;
-import com.example.foody.listeners.Listener_for_BackFragment;
-import com.example.foody.utils.Constant_Values;
+import com.test.foody.R;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.utils.Constant_Values;
 
 public class WebviewFragment extends Fragment {
     private ImageView img_Back_Webview_Frag;
