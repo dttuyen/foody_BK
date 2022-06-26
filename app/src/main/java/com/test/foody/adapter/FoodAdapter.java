@@ -13,6 +13,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.test.foody.R;
+import com.test.foody.asyntask.Load_Image_Asynctask;
+import com.test.foody.fragment.CartFragment;
+import com.test.foody.listeners.Favorite_for_FoodAdapter;
+import com.test.foody.listeners.Listener_for_IncAndRedu;
+import com.test.foody.listeners.Load_Img_Listener;
+import com.test.foody.listeners.RecyclerView_Item_Listener;
+import com.test.foody.models.Bill_Details;
+import com.test.foody.models.Favorite;
+import com.test.foody.models.Foods;
+import com.test.foody.utils.Constant_Values;
+import com.test.foody.utils.Methods;
+
+import java.util.ArrayList;
+
+import me.relex.circleindicator.CircleIndicator3;
+import okhttp3.RequestBody;
+=======
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -21,13 +43,15 @@ import com.test.foody.models.Foods;
 
 import java.util.ArrayList;
 
-
 public class FoodAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private ArrayList<Foods> foods_list;
     private Context context;
     private Favorite_for_FoodAdapter listener;
     private static boolean for_Search;
+    private RecyclerView_Item_Listener listener_item_Click;
+    private Listener_for_IncAndRedu listener_for_incAndRedu;
+=======
 //    private RecyclerView_Item_Listener listener_item_Click;
 //    private Listener_for_IncAndRedu listener_for_incAndRedu;
     private ArrayList<Bitmap> list_image;

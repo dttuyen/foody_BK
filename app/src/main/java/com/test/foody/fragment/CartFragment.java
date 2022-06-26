@@ -18,6 +18,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.test.foody.R;
+import com.test.foody.adapter.BillDetailAdapter;
+import com.test.foody.asyntask.InsertBill_GetNextID_Asynctask;
+import com.test.foody.asyntask.InsertOrDelOrUpdate_Asynctask;
+import com.test.foody.asyntask.Load_Bill_Detail_Asynctask;
+import com.test.foody.activity.MainActivity;
+import com.test.foody.listeners.CartAdapter_Listenner;
+import com.test.foody.listeners.Get_Next_IDBill_Listener;
+import com.test.foody.listeners.Check_task_listener;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.listeners.Listener_for_PickAddress;
+import com.test.foody.listeners.Load_Bill_Detail_Listener;
 import com.test.foody.models.Bill;
 import com.test.foody.models.Bill_Details;
 import com.test.foody.utils.Methods;
@@ -99,6 +110,8 @@ public class CartFragment extends Fragment {
                     public void TinhTong(float Tong, boolean check) {
                         total = Tong;
                         total_in_address = (for_BillorCart) ? Tong + distance * Constant_Values.Shipping_Fee_Per_1Km
+                                    : Tong + bill_holder.getShipping_fee();
+=======
                                 : Tong + bill_holder.getShipping_fee();
                         total_in_address = (float) ((float) Math.round(total_in_address*100)/100);
                         txt_Total_Cart_Frag.setText("$"+ total_in_address );
