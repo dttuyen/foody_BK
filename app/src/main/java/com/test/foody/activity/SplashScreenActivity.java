@@ -1,13 +1,20 @@
 package com.test.foody.activity;
 
-
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.test.foody.R;
+import com.test.foody.asyntask.Get_Restaurant_Inf_Asynctask;
+import com.test.foody.asyntask.Load_Customer_Asynctask;
+import com.test.foody.listeners.Check_task_listener;
+import com.test.foody.listeners.Load_Customer_Listener;
+import com.test.foody.models.Customer;
+import com.test.foody.utils.Constant_Values;
 import com.test.foody.utils.Methods;
 
 import okhttp3.RequestBody;

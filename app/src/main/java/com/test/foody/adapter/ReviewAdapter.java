@@ -59,10 +59,10 @@ public class ReviewAdapter extends RecyclerView.Adapter {
         switch (viewType){
             case TYPE1:
                 itemView = layoutInflater.inflate(R.layout.first_review_row, parent, false);
-                return new ReviewAdapter.FirstItemViewHolder(itemView);
+                return new FirstItemViewHolder(itemView);
             default:
                 itemView = layoutInflater.inflate(R.layout.review_row, parent, false);
-                return new ReviewAdapter.ReviewViewHolder(itemView);
+                return new ReviewViewHolder(itemView);
         }
     }
 
@@ -100,31 +100,31 @@ public class ReviewAdapter extends RecyclerView.Adapter {
 
         //gán view
         public void bindView(){
-            img_Food_reivew_Frag.setImageBitmap(food_fist_item.getImage_Food());
-            int src_Favo = (food_fist_item.is_Favorite()) ? R.drawable.liked_icon : R.drawable.like_icon;
-            imgFavorite_Review_First_item.setImageResource(src_Favo);
+           img_Food_reivew_Frag.setImageBitmap(food_fist_item.getImage_Food());
+           int src_Favo = (food_fist_item.is_Favorite()) ? R.drawable.liked_icon : R.drawable.like_icon;
+           imgFavorite_Review_First_item.setImageResource(src_Favo);
 
-            txtName_Review_First_item.setText(food_fist_item.getName_Food());
-            txtPrice_Review_First_item.setText("$" + food_fist_item.getPrice_Food());
-            txtTime_Cook_Review_First_item.setText(food_fist_item.getTime_Cooking() + "min");
+           txtName_Review_First_item.setText(food_fist_item.getName_Food());
+           txtPrice_Review_First_item.setText("$" + food_fist_item.getPrice_Food());
+           txtTime_Cook_Review_First_item.setText(food_fist_item.getTime_Cooking() + "min");
 
-            ratingBar_review_first_row.setRating(food_fist_item.getRate());
+           ratingBar_review_first_row.setRating(food_fist_item.getRate());
 
-            imgFavorite_Review_First_item.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Favorite fav = new Favorite(food_fist_item.getiD_Food(), Constant_Values.getIdCus());
-                    if(food_fist_item.is_Favorite()){
+           imgFavorite_Review_First_item.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Favorite fav = new Favorite(food_fist_item.getiD_Food(), Constant_Values.getIdCus());
+                   if(food_fist_item.is_Favorite()){
 //                            //xóa
-                        listener_favorite.insert_or_del_Fav(fav, false, imgFavorite_Review_First_item,
-                                R.drawable.like_icon, food_fist_item.getiD_Food(),false);
-                    } else {
-                        //thêm
-                        listener_favorite.insert_or_del_Fav(fav, true, imgFavorite_Review_First_item,
-                                R.drawable.liked_icon, food_fist_item.getiD_Food(),true);
-                    }
-                }
-            });
+                       listener_favorite.insert_or_del_Fav(fav, false, imgFavorite_Review_First_item,
+                               R.drawable.like_icon, food_fist_item.getiD_Food(),false);
+                   } else {
+                       //thêm
+                       listener_favorite.insert_or_del_Fav(fav, true, imgFavorite_Review_First_item,
+                               R.drawable.liked_icon, food_fist_item.getiD_Food(),true);
+                   }
+               }
+           });
         }
     }
 
