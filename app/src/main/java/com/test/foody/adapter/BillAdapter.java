@@ -1,4 +1,4 @@
-package com.test.foody.adapters;
+package com.test.foody.adapter;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.test.foody.R;
 import com.test.foody.asyntask.Load_Bill_Detail_Asynctask;
+import com.test.foody.activity.MainActivity;
 import com.test.foody.ativity.MainActivity;
 import com.test.foody.listeners.Load_Bill_Detail_Listener;
 import com.test.foody.listeners.RecyclerView_Item_Listener;

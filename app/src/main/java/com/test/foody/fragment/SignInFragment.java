@@ -24,14 +24,6 @@ import com.test.foody.listeners.Load_Customer_Listener;
 import com.test.foody.models.Customer;
 import com.test.foody.utils.Constant_Values;
 import com.test.foody.utils.Methods;
-import com.example.foody.R;
-import com.example.foody.asyntask.Load_Customer_Asynctask;
-import com.example.foody.ativity.MainActivity;
-import com.example.foody.listeners.Listener_for_BackFragment;
-import com.example.foody.listeners.Load_Customer_Listener;
-import com.example.foody.models.Customer;
-import com.example.foody.utils.Constant_Values;
-import com.example.foody.utils.Methods;
 
 import okhttp3.RequestBody;
 

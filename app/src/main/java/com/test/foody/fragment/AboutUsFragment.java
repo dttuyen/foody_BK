@@ -11,7 +11,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.gms.maps.MapFragment;
 import com.test.foody.R;
 import com.test.foody.listeners.Listener_for_BackFragment;
 import com.test.foody.utils.Constant_Values;

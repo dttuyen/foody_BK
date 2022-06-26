@@ -18,9 +18,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.test.foody.R;
-import com.test.foody.adapters.FeedbackAdapter;
+import com.test.foody.adapter.FeedbackAdapter;
 import com.test.foody.asyntask.InsertOrDelOrUpdate_Asynctask;
-import com.test.foody.ativity.MainActivity;
+import com.test.foody.activity.MainActivity;
 import com.test.foody.listeners.Check_task_listener;
 import com.test.foody.listeners.Listener_for_BackFragment;
 import com.test.foody.models.Bill_Details;

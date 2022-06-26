@@ -1,7 +1,6 @@
 package com.test.foody.listeners;
 
 import com.test.foody.models.Bill_Details;
-import com.test.foody.models.Bill_Details;
 
 import java.util.ArrayList;
 

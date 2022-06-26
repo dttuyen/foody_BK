@@ -69,7 +69,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_FoodView"
-        app:layout_constraintVertical_weight="12">
+        app:layout_constraintVertical_weight="12" >
 
 
         <androidx.recyclerview.widget.RecyclerView

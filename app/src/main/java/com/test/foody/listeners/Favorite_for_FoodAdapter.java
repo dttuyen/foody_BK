@@ -2,8 +2,9 @@ package com.test.foody.listeners;
 
 import android.widget.ImageView;
 
-
+import com.test.foody.adapter.FoodAdapter;
 import com.test.foody.models.Favorite;
+import com.test.foody.models.Foods;
 
 import java.util.ArrayList;
 

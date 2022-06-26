@@ -1,4 +1,4 @@
-package com.example.foody.fragment;
+package com.test.foody.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,7 +14,15 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-
+import com.test.foody.R;
+import com.test.foody.asyntask.InsertOrDelOrUpdate_Asynctask;
+import com.test.foody.activity.MainActivity;
+import com.test.foody.listeners.Check_task_listener;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.listeners.Listener_for_ChangePass;
+import com.test.foody.models.Customer;
+import com.test.foody.utils.Constant_Values;
+import com.test.foody.utils.Methods;
 
 import okhttp3.RequestBody;
 
@@ -37,7 +45,7 @@ public class InformationFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_information, container, false);
         SetUp(view);
-        // Inflate the layout for this                                                        fragment
+        // Inflate the layout for this fragment
         return view;
     }
 

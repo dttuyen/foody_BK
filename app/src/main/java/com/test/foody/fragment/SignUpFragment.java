@@ -28,7 +28,6 @@ import com.test.foody.listeners.Load_Customer_Listener;
 import com.test.foody.models.Customer;
 import com.test.foody.utils.Constant_Values;
 import com.test.foody.utils.Methods;
-import com.test.foody.listeners.Listener_for_BackFragment;
 
 import okhttp3.RequestBody;
 
@@ -212,7 +211,6 @@ public class SignUpFragment extends Fragment {
                                             @Override
                                             public void orderBill_Or_BackFragment() {
                                                 BillFragment.setCheck_NewBill(true);
-                                                com.example.foody.fragment.BillFragment.setCheck_NewBill(true);
                                                 FoodFragment.setCheck_NewCus(true);
                                                 MainActivity.selecFoodMenu();
                                             }

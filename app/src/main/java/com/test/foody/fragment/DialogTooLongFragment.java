@@ -18,7 +18,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.test.foody.utils.Constant_Values;
 
-public class DialogContactFragment extends DialogFragment {
+public class DialogTooLongFragment extends DialogFragment {
     private static final int MY_PERMISSION_REQUEST_CODE_CALL_PHONE = 555;
 
     private static final String LOG_TAG = "Androidtest";
@@ -27,13 +27,21 @@ public class DialogContactFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
-        dialog.setTitle("Contact with us");
-        dialog.setMessage("Call our manager staff.");
+        dialog.setTitle("Your order isn't come.");
+        dialog.setMessage("Call our support staff or Wait at the moment.");
 
         dialog.setPositiveButton("Call", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 askPermissionAndCall();
+            }
+        });
+
+        dialog.setNegativeButton("I will still wate!", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getActivity(), "We're sorry about your wait!"
+                        + "\n" + "Your order will be come early!", Toast.LENGTH_SHORT).show();
             }
         });
 
