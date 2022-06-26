@@ -5,9 +5,10 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.test.foody.listeners.Load_Data_Listener;
 import com.test.foody.models.Foods;
-import com.test.foody.utils.Constant_Values;
 import com.test.foody.utils.JsonUtils;
+import com.test.foody.utils.Constant_Values;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -21,18 +22,18 @@ import okhttp3.Response;
 
 public class Load_Food_Asynctask extends AsyncTask<Void, String, Boolean> {
     private ArrayList<Foods> list_Foods;
-//    private Load_Data_Listener listener;
+    private Load_Data_Listener listener;
     private RequestBody requestBody;
 
-//    public Load_Food_Asynctask(Load_Data_Listener listener, RequestBody requestBody) {
-//        this.list_Foods = new ArrayList<>();
-//        this.listener = listener;
-//        this.requestBody = requestBody;
-//    }
+    public Load_Food_Asynctask(Load_Data_Listener listener, RequestBody requestBody) {
+        this.list_Foods = new ArrayList<>();
+        this.listener = listener;
+        this.requestBody = requestBody;
+    }
 
     @Override
     protected void onPreExecute() {
-//        listener.onPre();//Hàm chuẩn bị
+        listener.onPre();//Hàm chuẩn bị
         super.onPreExecute();
     }
 
@@ -75,6 +76,6 @@ public class Load_Food_Asynctask extends AsyncTask<Void, String, Boolean> {
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
-//        listener.onEnd(aBoolean, list_Foods);
+        listener.onEnd(aBoolean, list_Foods);
     }
 }

@@ -5,8 +5,8 @@ import android.util.Log;
 
 import com.test.foody.listeners.Load_Bill_Listener;
 import com.test.foody.models.Bill;
-import com.test.foody.utils.Constant_Values;
 import com.test.foody.utils.JsonUtils;
+import com.test.foody.utils.Constant_Values;
 
 import org.json.JSONArray;
 import org.json.JSONException;
