@@ -1,6 +1,6 @@
 package com.test.foody.listeners;
 
-import com.example.foody.models.Favorite;
+import com.test.foody.models.Favorite;
 
 import java.util.ArrayList;
 
