@@ -19,11 +19,13 @@ import android.widget.Toast;
 
 import com.test.foody.R;
 import com.test.foody.adapters.FoodAdapter;
+import com.test.foody.adapter.FoodAdapter;
 import com.test.foody.asyntask.Load_Favorite_Asynctask;
 import com.test.foody.asyntask.Load_Food_Asynctask;
 import com.test.foody.asyntask.Load_Reviews_Asynctask;
 import com.test.foody.asyntask.InsertOrDelOrUpdate_Asynctask;
 import com.test.foody.ativity.MainActivity;
+import com.test.foody.activity.MainActivity
 import com.test.foody.listeners.Favorite_for_FoodAdapter;
 import com.test.foody.listeners.Check_task_listener;
 import com.test.foody.listeners.Listener_for_BackFragment;
@@ -37,7 +39,7 @@ import com.test.foody.utils.Methods;
 import com.test.foody.utils.Constant_Values;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Collections
 import java.util.Collections;
 import java.util.Collections;
 

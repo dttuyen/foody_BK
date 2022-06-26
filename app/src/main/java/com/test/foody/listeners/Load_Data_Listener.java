@@ -1,6 +1,6 @@
 package com.test.foody.listeners;
 
-import com.example.foody.models.Foods;
+import com.test.foody.models.Foods;
 
 import java.util.ArrayList;
 

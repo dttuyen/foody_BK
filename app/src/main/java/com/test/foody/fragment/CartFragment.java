@@ -1,4 +1,4 @@
-package com.test.foody.fragment;
+package com.example.foody.fragment;
 
 import android.os.Bundle;
 
@@ -111,6 +111,8 @@ public class CartFragment extends Fragment {
                         total = Tong;
                         total_in_address = (for_BillorCart) ? Tong + distance * Constant_Values.Shipping_Fee_Per_1Km
                                     : Tong + bill_holder.getShipping_fee();
+=======
+                                : Tong + bill_holder.getShipping_fee();
                         total_in_address = (float) ((float) Math.round(total_in_address*100)/100);
                         txt_Total_Cart_Frag.setText("$"+ total_in_address );
                         if(check)
