@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.test.foody.R;
+import com.test.foody.adapters.ReviewAdapter;
+import com.test.foody.asyntask.Load_Reviews_Asynctask;
+import com.test.foody.ativity.MainActivity;
 import com.test.foody.adapter.ReviewAdapter;
 import com.test.foody.asyntask.Load_Reviews_Asynctask;
 import com.test.foody.activity.MainActivity;

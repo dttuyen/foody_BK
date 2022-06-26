@@ -3,31 +3,29 @@ package com.test.foody.asyntask;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.test.foody.listeners.Load_Bill_Listener;
-import com.test.foody.models.Bill;
+import com.test.foody.listeners.Load_Reviews_Listener;
+import com.test.foody.models.Reviews;
 import com.test.foody.utils.JsonUtils;
 import com.test.foody.utils.Constant_Values;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import okhttp3.RequestBody;
 
-public class Load_Bill_Asynctask extends AsyncTask<Void, String, Boolean> {
-    private ArrayList<Bill> billArrayList;
-    private Load_Bill_Listener listener;
+public class Load_Reviews_Asynctask extends AsyncTask<Void, String, Boolean> {
+    private ArrayList<Reviews> list_reviews;
+    private Load_Reviews_Listener listener;
     private RequestBody requestBody;
 
-    public Load_Bill_Asynctask(Load_Bill_Listener listener, RequestBody requestBody) {
+    public Load_Reviews_Asynctask(Load_Reviews_Listener listener, RequestBody requestBody) {
         this.listener = listener;
         this.requestBody = requestBody;
-        billArrayList = new ArrayList<>();
+        list_reviews = new ArrayList<>();
     }
 
     @Override
@@ -39,21 +37,18 @@ public class Load_Bill_Asynctask extends AsyncTask<Void, String, Boolean> {
     @Override
     protected Boolean doInBackground(Void... voids) {
         try {
-            String result = JsonUtils.okhttpPost(Constant_Values.URL_BILL_API, requestBody);
+            String result = JsonUtils.okhttpPost(Constant_Values.URL_BILL_DETAIL_API, requestBody);
 
             JSONArray jsonArray = new JSONArray(result);
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             for(int i = 0; i < jsonArray.length(); ++i){
                 JSONObject object = jsonArray.getJSONObject(i);
-
-                Bill bill = new Bill(object.getInt("ID_Bill"), object.getInt("ID_Cus"),
-                        (float) object.getDouble("Total"), dateFormat.parse(object.getString("Time")),
-                        object.getString("Address"), (float) object.getDouble("Shipping_fee"),
-                        (object.getInt("done") == 1) ? true : false);
-                billArrayList.add(bill);
+                Reviews reviews= new Reviews(object.getString("Name_Cus"), dateFormat.parse(object.getString("Time")),
+                        (float) object.getDouble("Rate"), object.getString("Reviews"));
+                list_reviews.add(reviews);
             }
             return true;
-        } catch (JSONException | ParseException e) {
+        } catch (Exception e) {
             Log.e("AAA", e.getMessage());
             return false;
         }
@@ -62,6 +57,6 @@ public class Load_Bill_Asynctask extends AsyncTask<Void, String, Boolean> {
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
-        listener.onEnd(aBoolean, billArrayList);
+        listener.onEnd(aBoolean, list_reviews);
     }
 }

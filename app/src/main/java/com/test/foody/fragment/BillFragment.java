@@ -1,4 +1,4 @@
-package com.example.foody.fragment;
+package com.test.foody.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +15,13 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.test.foody.R;
 import com.test.foody.adapters.BillAdapter;
+import com.test.foody.asyntask.Load_Bill_Asynctask;
+import com.test.foody.asyntask.Load_Bill_Detail_Asynctask;
+import com.test.foody.ativity.MainActivity;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.listeners.Load_Bill_Detail_Listener;
+import com.test.foody.listeners.Load_Bill_Listener;
+import com.test.foody.listeners.RecyclerView_Item_Listener;
 import com.test.foody.models.Bill;
 import com.test.foody.models.Bill_Details;
 import com.test.foody.utils.Methods;
