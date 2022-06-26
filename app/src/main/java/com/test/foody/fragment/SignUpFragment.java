@@ -211,6 +211,7 @@ public class SignUpFragment extends Fragment {
                                         new Listener_for_BackFragment() {
                                             @Override
                                             public void orderBill_Or_BackFragment() {
+                                                BillFragment.setCheck_NewBill(true);
                                                 com.example.foody.fragment.BillFragment.setCheck_NewBill(true);
                                                 FoodFragment.setCheck_NewCus(true);
                                                 MainActivity.selecFoodMenu();
