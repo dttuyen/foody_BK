@@ -1,22 +1,23 @@
 package com.test.foody.activity;
 
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.os.SystemClock;
-import android.view.MenuItem;
-import android.widget.Toast;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.test.foody.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.test.foody.fragment.AccountsFragment;
 import com.test.foody.fragment.BillFragment;
 import com.test.foody.fragment.CartFragment;
 import com.test.foody.fragment.FoodFragment;
+import com.test.foody.listeners.Listener_for_BackFragment;
 import com.test.foody.models.Bill;
 import com.test.foody.utils.Constant_Values;
 import com.test.foody.utils.Methods;
@@ -69,7 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUp(){
         fragment_Food = new FoodFragment();
-        fragment_Cart = new CartFragment();
+        fragment_Cart = new CartFragment(new Bill() ,new ArrayList<>(), true, false,
+                new Listener_for_BackFragment() {
+            @Override
+            public void orderBill_Or_BackFragment() {
+
+            }
+        });
         fragment_Bill = new BillFragment();
         fragment_Accounts = new AccountsFragment();
         chang_Menu(fragment_Food);
@@ -77,25 +84,25 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    switch (item.getItemId()) {
-                        case R.id.bottom_food:
-                            chang_Menu(fragment_Food);
-                            return true;
-                        case R.id.bottom_Cart:
-                            chang_Menu(fragment_Cart);
-                            return true;
-                        case R.id.bottom_bill:
-                            chang_Menu(fragment_Bill);
-                            return true;
-                        case R.id.bottom_account:
-                            chang_Menu(fragment_Accounts);
-                            return true;
-                    }
-                    return false;
-                }
-            };
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.bottom_food:
+                    chang_Menu(fragment_Food);
+                    return true;
+                case R.id.bottom_Cart:
+                    chang_Menu(fragment_Cart);
+                    return true;
+                case R.id.bottom_bill:
+                    chang_Menu(fragment_Bill);
+                    return true;
+                case R.id.bottom_account:
+                    chang_Menu(fragment_Accounts);
+                    return true;
+            }
+            return false;
+        }
+    };
 
     private void chang_Menu(Fragment fragment){
         if(getSupportFragmentManager().getBackStackEntryCount() > 0){

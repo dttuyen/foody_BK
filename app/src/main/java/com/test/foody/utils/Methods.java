@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 
+import com.test.foody.models.Customer;
 import com.google.gson.JsonObject;
 
 import okhttp3.MultipartBody;

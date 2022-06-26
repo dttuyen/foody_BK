@@ -18,9 +18,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.foody.R;
-import com.example.foody.listeners.Listener_for_BackFragment;
-import com.example.foody.listeners.Listener_for_PickAddress;
+import com.test.foody.R;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.listeners.Listener_for_PickAddress;
 
 import java.util.ArrayList;
 
