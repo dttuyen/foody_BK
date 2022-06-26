@@ -34,14 +34,6 @@ import java.util.ArrayList;
 
 import me.relex.circleindicator.CircleIndicator3;
 import okhttp3.RequestBody;
-=======
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.ViewPager2;
-
-import com.test.foody.listeners.Favorite_for_FoodAdapter;
-import com.test.foody.models.Foods;
-
-import java.util.ArrayList;
 
 public class FoodAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -51,9 +43,6 @@ public class FoodAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static boolean for_Search;
     private RecyclerView_Item_Listener listener_item_Click;
     private Listener_for_IncAndRedu listener_for_incAndRedu;
-=======
-//    private RecyclerView_Item_Listener listener_item_Click;
-//    private Listener_for_IncAndRedu listener_for_incAndRedu;
     private ArrayList<Bitmap> list_image;
 
     public final int TYPE1= 0;
