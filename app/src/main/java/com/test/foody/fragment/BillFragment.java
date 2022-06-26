@@ -1,4 +1,4 @@
-package com.example.foody.fragment;
+package com.test.foody.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.test.foody.R;
-import com.test.foody.adapters.BillAdapter;
+import com.test.foody.adapter.BillAdapter;
+import com.test.foody.asyntask.Load_Bill_Asynctask;
+import com.test.foody.asyntask.Load_Bill_Detail_Asynctask;
+import com.test.foody.activity.MainActivity;
+import com.test.foody.listeners.Listener_for_BackFragment;
+import com.test.foody.listeners.Load_Bill_Detail_Listener;
+import com.test.foody.listeners.Load_Bill_Listener;
+import com.test.foody.listeners.RecyclerView_Item_Listener;
 import com.test.foody.models.Bill;
 import com.test.foody.models.Bill_Details;
 import com.test.foody.utils.Methods;
@@ -129,7 +136,8 @@ public class BillFragment extends Fragment {
                     if(list_Bill.isEmpty())
                         recycler_Bill.setBackgroundResource(R.drawable.no_job_today);
                 } else{
-                    Toast.makeText(getContext(), "Lỗi Server", Toast.LENGTH_SHORT).show();
+                    if(getContext() != null)
+                        Toast.makeText(getContext(), "Lỗi Server", Toast.LENGTH_SHORT).show();
                 }
             }
         };
