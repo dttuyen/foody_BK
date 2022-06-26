@@ -1,5 +1,7 @@
 package com.test.foody.models;
 
+import java.io.Serializable;
+
 public class Favorite {
     private int iD_Food;
     private int iD_Cus;
